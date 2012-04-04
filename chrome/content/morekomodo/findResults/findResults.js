@@ -149,7 +149,11 @@ var moreKomodoFindResults = {
     onFindBySelection : function(tabIndex) {
         var view = ko.views.manager.currentView;
 
-        if (!(view && view.document && (view.getAttribute("type") == "editor"))) {
+        if (!(view
+              //CH
+              //ref: http://code.activestate.com/lists/komodo-beta/4456/
+              && (koDoc = view.document || view.koDoc)
+              && (view.getAttribute("type") == "editor"))) {
             return;
         }
         var sel = view.selection;

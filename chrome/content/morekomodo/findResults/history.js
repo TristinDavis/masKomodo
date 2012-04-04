@@ -159,8 +159,10 @@ var moreKomodoFindResultsHistory = {
                 function(view) {
                     var osPathSvc = Components.classes["@activestate.com/koOsPath;1"]
                             .getService(Components.interfaces.koIOsPath);
-                    if (!view || !view.document ||
-                        !osPathSvc.samepath(view.document.displayPath, displayPath))
+                            //CH
+                    var koDoc = view.document || view.koDoc;
+                    if (!view || !koDoc ||
+                        !osPathSvc.samepath(koDoc.displayPath, displayPath))
                     {
                         // File wasn't opened for whatever reason.
                         return;

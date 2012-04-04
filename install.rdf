@@ -3,7 +3,7 @@
 <Description about="urn:mozilla:install-manifest">
 <em:id>morekomodo@dafizilla.sourceforge.net</em:id>
 <em:name>MoreKomodo</em:name>
-<em:version>1.8.2</em:version>
+<em:version>1.8.3</em:version>
 <em:description>Add new features to Komodo. Favorites, file and clipboard operation, text conversion</em:description>
 <em:creator>Davide Ficano</em:creator>
 <em:homepageURL>http://dafizilla.sourceforge.net/morekomodo</em:homepageURL>
@@ -19,7 +19,7 @@
 <Description>
 <em:id>{36E66FA0-F259-11D9-850E-000D935D3368}</em:id>
 <em:minVersion>5.0</em:minVersion>
-<em:maxVersion>6.*</em:maxVersion>
+<em:maxVersion>7.*</em:maxVersion>
 </Description>
 </em:targetApplication>
 <!-- Komodo Edit -->
@@ -27,7 +27,7 @@
 <Description>
 <em:id>{b1042fb5-9e9c-11db-b107-000d935d3368}</em:id>
 <em:minVersion>5.0</em:minVersion>
-<em:maxVersion>6.*</em:maxVersion>
+<em:maxVersion>7.*</em:maxVersion>
 </Description>
 </em:targetApplication>
 </Description>

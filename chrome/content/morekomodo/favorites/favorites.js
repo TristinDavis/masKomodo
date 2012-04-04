@@ -136,12 +136,25 @@ var gFavorites = {
         var views = ko.windowManager.getMainWindow().ko.views.manager.topView.getDocumentViews(true);
 
         var isDescByName = this.oDescription.checked;
-        for (var i = 0; i < views.length; i++) {
-            var document = views[i].document;
-            if (views[i].getAttribute("type") == "startpage" || document.isUntitled)
-                continue;
-            var favoriteInfo = FavoriteInfo.createInfo(null, isDescByName, document.file, false);
-            this.fileListTreeView.insertFavoriteInfo(favoriteInfo);
+        if ("document" in view){    
+            //CH
+            //This for loop was the original code
+            //Add the if around it and the else below it
+            for (var i = 0; i < views.length; i++) {
+                var document = views[i].document;
+                if (views[i].getAttribute("type") == "startpage" || document.isUntitled)
+                    continue;
+                var favoriteInfo = FavoriteInfo.createInfo(null, isDescByName, document.file, false);
+                this.fileListTreeView.insertFavoriteInfo(favoriteInfo);
+            }
+        }else{
+            for (var i = 0; i < views.length; i++) {
+                var document = views[i].koDoc;
+                if (views[i].getAttribute("type") == "startpage" || document.isUntitled)
+                    continue;
+                var favoriteInfo = FavoriteInfo.createInfo(null, isDescByName, document.file, false);
+                this.fileListTreeView.insertFavoriteInfo(favoriteInfo);
+            }
         }
         this.fileListTreeView.refresh();
     },
