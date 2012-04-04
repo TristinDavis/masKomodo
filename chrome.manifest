@@ -1,0 +1,14 @@
+content	morekomodo	jar:chrome/morekomodo.jar!/content/morekomodo/
+skin	morekomodo	classic/1.0	jar:chrome/morekomodo.jar!/skin/classic/morekomodo/
+
+
+overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/morekomodoOverlay.xul
+overlay	chrome://komodo/content/pref/pref.xul	chrome://morekomodo/content/pref/prefOverlay.xul
+overlay	chrome://komodo/content/dialogs/filebrowser/filebrowser.xul	chrome://morekomodo/content/favorites/filebrowser/filebrowserOverlay.xul
+overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/findResults/findResultsOverlay-ko5.xul
+overlay	chrome://komodo/content/find/find2.xul	chrome://morekomodo/content/favorites/find/findOverlay.xul
+overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/runOutputResults/runOutputResultsOverlay.xul
+overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/codeConversionOverlay-ko5.xul appversion<6b1
+overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/codeConversionOverlay-ko6.xul appversion>6b1
+
+locale	morekomodo	en-US	jar:chrome/morekomodo.jar!/locale/en-US/morekomodo/
