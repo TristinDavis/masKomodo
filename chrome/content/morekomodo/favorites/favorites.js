@@ -98,7 +98,7 @@ var gFavorites = {
     addCurrentFile : function() {
         var mainWindow = ko.windowManager.getMainWindow();
         var currView = mainWindow.ko.views.manager.currentView;
-        var document = (currView.document || currView.koDOc);
+        var document = currView.document || currView.koDOc;
 
         if (document.isUntitled) {
             mainWindow.ko.dialogs.alert(this.bundle.getString("path.untitled.document"));
