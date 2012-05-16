@@ -321,9 +321,9 @@ var moreKomodo = {
 
     onDeleteFile : function() {
 	//CH
-	var koDoc = view.document || view.koDoc;
         try {
             var view = ko.views.manager.currentView;
+	    var koDoc = view.document || view.koDoc;
             var file = koDoc.file;
             var msg = MoreKomodoCommon.getLocalizedMessage("confirm.delete.file");
 
@@ -346,9 +346,9 @@ var moreKomodo = {
 
     onMakeBackup : function() {
 	//CH
-	var koDoc = view.document || view.koDoc;
         try {
             var view = ko.views.manager.currentView;
+	    var koDoc = view.document || view.koDoc;
             var file = koDoc.file;
             var currentPath = MoreKomodoCommon.makeLocalFile(file.path);
             var msg = MoreKomodoCommon.getLocalizedMessage("select.backup.file.title");
