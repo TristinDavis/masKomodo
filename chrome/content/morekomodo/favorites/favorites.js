@@ -98,7 +98,7 @@ var gFavorites = {
     addCurrentFile : function() {
         var mainWindow = ko.windowManager.getMainWindow();
         var currView = mainWindow.ko.views.manager.currentView;
-        var document = currView.document || currView.koDOc;
+        var document = (currView.document || currView.koDOc);
 
         if (document.isUntitled) {
             mainWindow.ko.dialogs.alert(this.bundle.getString("path.untitled.document"));
@@ -115,7 +115,7 @@ var gFavorites = {
 
     addCurrentFolder : function() {
         var mainWindow = ko.windowManager.getMainWindow();
-        var currView = mainWindow.ko.views.manager.currentView
+        var currView = mainWindow.ko.views.manager.currentView;
         var document = (currView.document || currView.koDoc);
 
         if (document.isUntitled) {
@@ -136,9 +136,8 @@ var gFavorites = {
 
     addAllFiles : function() {
         var views = ko.windowManager.getMainWindow().ko.views.manager.topView.getDocumentViews(true);
-
         var isDescByName = this.oDescription.checked;
-        if ("document" in view){    
+        if ("document" in views){    
             //CH
             //This for loop was the original code
             //Add the if around it and the else below it
