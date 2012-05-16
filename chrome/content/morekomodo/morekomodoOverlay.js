@@ -372,7 +372,11 @@ var moreKomodo = {
     onCopyFullPath : function() {
         var view = ko.views.manager.currentView;
 	//CH
-        var file = view.document.displayPath || view.koDoc.displayPath;
+	var document = view.document || view.koDoc;
+        //var file = view.document.displayPath || view.koDoc.displayPath;
+	// above line breaks, changed to match the onCopyDirectoryPath mothod
+	var file = document.displayPath;
+
 
         MoreKomodoCommon.copyToClipboard(file);
         view.setFocus();
@@ -396,7 +400,8 @@ var moreKomodo = {
     onCopyFileName : function() {
         var view = ko.views.manager.currentView;
 	//CH
-        var file = view.document.baseName || view.koDoc.baseName;
+	var document = view.document || view.koDoc;
+        var file = document.baseName;
 
         MoreKomodoCommon.copyToClipboard(file);
         view.setFocus();
