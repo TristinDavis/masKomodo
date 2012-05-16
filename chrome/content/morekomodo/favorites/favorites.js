@@ -97,7 +97,8 @@ var gFavorites = {
 
     addCurrentFile : function() {
         var mainWindow = ko.windowManager.getMainWindow();
-        var document = mainWindow.ko.views.manager.currentView.document;
+        var currView = mainWindow.ko.views.manager.currentView;
+        var document = (currView.document || currView.koDOc);
 
         if (document.isUntitled) {
             mainWindow.ko.dialogs.alert(this.bundle.getString("path.untitled.document"));
@@ -114,7 +115,8 @@ var gFavorites = {
 
     addCurrentFolder : function() {
         var mainWindow = ko.windowManager.getMainWindow();
-        var document = mainWindow.ko.views.manager.currentView.document;
+        var currView = mainWindow.ko.views.manager.currentView
+        var document = (currView.document || currView.koDoc);
 
         if (document.isUntitled) {
             mainWindow.ko.dialogs.alert(this.bundle.getString("path.untitled.document"));

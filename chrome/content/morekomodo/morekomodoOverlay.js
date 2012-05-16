@@ -272,7 +272,7 @@ var moreKomodo = {
 
     onRenameFile : function() {
         var currView = ko.views.manager.currentView;
-        var viewDoc = currView.document;
+        var viewDoc = (currView.document || currView.koDoc);
 
         if (!this.checkDirtyFile(viewDoc)) {
             return;
@@ -639,7 +639,7 @@ var moreKomodo = {
                 }
                 return false;
             case "cmd_morekomodo_lockedit":
-		var koDoc = view.document || view.koDoc'
+		var koDoc = view.document || view.koDoc;
                 return view && view.getAttribute('type') == 'editor' && koDoc;
             case "cmd_morekomodo_unicodetable":
             case "cmd_morekomodo_hexdump":
@@ -827,11 +827,12 @@ var moreKomodo = {
     //        button.removeAttribute("checked");
     //    }
     //},
+	var koDoc = view.document || view.koDoc;
 	if (view
 	    && view.getAttribute('type') == 'editor'
 	    //attempting declaration of variable within if statement
 	    //ref: http://code.activestate.com/lists/komodo-beta/4456/
-	    && (var koDoc = view.document || view.koDoc) {
+	    && koDoc) {
 	    if (view.scintilla.scimoz.readOnly) {
 		button.setAttribute("checked", "true");
 	    } else {
