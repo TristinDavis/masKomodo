@@ -7,7 +7,11 @@ overlay	chrome://komodo/content/pref/pref.xul	chrome://morekomodo/content/pref/p
 overlay	chrome://komodo/content/dialogs/filebrowser/filebrowser.xul	chrome://morekomodo/content/favorites/filebrowser/filebrowserOverlay.xul
 overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/findResults/findResultsOverlay-ko5.xul
 overlay	chrome://komodo/content/find/find2.xul	chrome://morekomodo/content/favorites/find/findOverlay.xul
-overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/runOutputResults/runOutputResultsOverlay.xul
+
+overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/runOutputResults/runOutputResultsOverlay.xul appversion<7b1
+overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/runOutputResults/runOutputResultsOverlay-main.xul appversion>7b1
+overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/runOutputResults/runOutputResultsOverlay-content.xul appversion>7b1
+
 overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/codeConversionOverlay-ko6.xul appversion<7b1
 overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/codeConversionOverlay-ko7.xul appversion>7b1
 

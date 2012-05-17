@@ -36,29 +36,60 @@
 */
 var moreKomodoRunOutputResults = {
     onLoad : function() {
-        var listButtonWidget = document.getElementById("runoutput-list-button");
+        // Allow to select items to copy
+        //CH  Added pane to accomodate separation in document to contentDocument
+        // and keep k6 and k7 compliance.
+        var appInfo = Components.classes["@mozilla.org/xre/app-info;1"]
+        //TODO  THIS NEEDS TO BE MADE TO WORK FOR KOMODO THEN ADDED TO THE IF BELOW
+                        .getService(Components.interfaces.nsIXULAppInfo);
+        if (CHECK if version 7 here using check for appInfo){
+            var pane = document.getElementById("runoutput-desc-tabpanel");
+            var listButtonWidget = pane.contentDocument.getElementById("runoutput-list-button");
+            
+            this.enableCopyButton(!listButtonWidget.hasAttribute("disabled"));
+    
+            if (listButtonWidget) {
+                var self = this;
+    
+                this.handle_copy_setup = function(event) {
+                    self.handleCopy(event);
+                };
+                listButtonWidget.addEventListener("DOMAttrModified",
+                            this.handle_copy_setup,
+                            false);
+            }
+            //CH  Added pane to accomodate separation in document to contentDocument
+            var pane = document.getElementById("runoutput-desc-tabpanel");
+            var treeWidget = pane.contentDocument.getElementById("runoutput-tree");
+            if (treeWidget) {
+                treeWidget.setAttribute("context", "moreKomodoRunOutputResultsContext");
+            }
+            //UNless it's K6 then do this stuff
+        }else{
+            var listButtonWidget = document.getElementById("runoutput-list-button");
 
-        this.enableCopyButton(!listButtonWidget.hasAttribute("disabled"));
+            this.enableCopyButton(!listButtonWidget.hasAttribute("disabled"));
 
-        if (listButtonWidget) {
-            var self = this;
+            if (listButtonWidget) {
+                var self = this;
 
-            this.handle_copy_setup = function(event) {
-                self.handleCopy(event);
-            };
-            listButtonWidget.addEventListener("DOMAttrModified",
-                        this.handle_copy_setup,
-                        false);
-        }
+                this.handle_copy_setup = function(event) {
+                    self.handleCopy(event);
+                };
+                listButtonWidget.addEventListener("DOMAttrModified",
+                            this.handle_copy_setup,
+                            false);
+            }
 
         // Allow to select items to copy
-        var treeWidget = document.getElementById("runoutput-tree");
-        if (treeWidget) {
-            treeWidget.setAttribute("context", "moreKomodoRunOutputResultsContext");
+            var treeWidget = document.getElementById("runoutput-tree");
+            if (treeWidget) {
+                treeWidget.setAttribute("context", "moreKomodoRunOutputResultsContext");
+            }
         }
 
         window.controllers.appendController(this);
-     },
+    },
 
     handleCopy : function(event) {
         if (event.attrName == "disabled") {
@@ -76,7 +107,8 @@ var moreKomodoRunOutputResults = {
                        "runoutput-morekomodo-toolbar-copy"];
 
         for (var i in buttons) {
-            var button = document.getElementById(buttons[i]);
+            var pane = document.getElementById("runoutput-desc-tabpanel");
+            var button = pane.contentDocument.getElementById(buttons[i]);
             if (isEnabled) {
                 button.removeAttribute("disabled");
             } else {
