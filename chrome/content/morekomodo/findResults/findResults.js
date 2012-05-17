@@ -36,46 +36,22 @@
 */
 var moreKomodoFindResults = {
     init : function() {
-        // Allow to select items to copy
-        //CH  Added pane to accomodate separation in document to contentDocument
-        // and keep k6 and k7 compliance.
-        var appInfo = Components.classes["@mozilla.org/xre/app-info;1"]
-        //TODO  THIS NEEDS TO BE MADE TO WORK FOR KOMODO THEN ADDED TO THE IF BELOW
-                        .getService(Components.interfaces.nsIXULAppInfo);
-        if (CHECK if version 7 here using check for appInfo){
-            for (var i = 1; i <= 2; i++) {
-                //CH  Added pane to accomodate separation in document to contentDocument
-                var pane = document.getElementById("findresults" + i + "_tabpanel");
-                var stopButton = pane.contentDocument.getElementById("findresults-stopsearch-button");
-                if (stopButton) {
-                    stopButton.addEventListener("DOMAttrModified",
-                                moreKomodoFindResults.handleRefreshStatus,
-                                false);
-                }
-    
-                // Allow to select items to copy
-                //CH  Added pane to accomodate separation in document to contentDocument
-                var pane = document.getElementById("findresults" + i + "_tabpanel");
-                var treeWidget = pane.contentDocument.getElementById("findresults-body");
-                treeWidget.setAttribute("seltype", "multiple");
-                treeWidget.setAttribute("context", "moreKomodofindResultsContext" + i);
+        for (var i = 1; i <= 2; i++) {
+            //CH  Added pane to accomodate separation in document to contentDocument
+            var pane = document.getElementById("findresults" + i + "_tabpanel");
+            var stopButton = pane.contentDocument.getElementById("findresults-stopsearch-button");
+            if (stopButton) {
+                stopButton.addEventListener("DOMAttrModified",
+                            moreKomodoFindResults.handleRefreshStatus,
+                            false);
             }
-            //UNless it's K6 then do this stuff
-        }else{
-            for (var i = 1; i <= 2; i++) {
-                var stopButton = document.getElementById("findresults" + i + "-stopsearch-button");
 
-                if (stopButton) {
-                    stopButton.addEventListener("DOMAttrModified",
-                                moreKomodoFindResults.handleRefreshStatus,
-                                false);
-                }
-
-                // Allow to select items to copy
-                var treeWidget = document.getElementById("findresults" + i);
-                treeWidget.setAttribute("seltype", "multiple");
-                treeWidget.setAttribute("context", "moreKomodofindResultsContext" + i);
-            }
+            // Allow to select items to copy
+            //CH  Added pane to accomodate separation in document to contentDocument
+            var pane = document.getElementById("findresults" + i + "_tabpanel");
+            var treeWidget = pane.contentDocument.getElementById("findresults-body");
+            treeWidget.setAttribute("seltype", "multiple");
+            treeWidget.setAttribute("context", "moreKomodofindResultsContext" + i);
         }
         this.arrFind = [];
         this.findStartedFromUI = true;
