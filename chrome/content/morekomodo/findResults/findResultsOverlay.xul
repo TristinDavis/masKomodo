@@ -214,8 +214,8 @@
              onfocus="document.getElementById('morekomodo-findResultsHistoryTreechildren').focus();" />
     </tabs>
 
-    <tabpanels id="output_tabpanels">
-        <tabpanel id="morekomodo_findresults_history_tabpanel"
+    <ko-pane id="workspace_bottom_area">
+        <browser id="morekomodo_findresults_history_tabpanel"
                   orient="vertical"
                   flex="1">
             <hbox>
@@ -258,6 +258,6 @@
                 <treechildren id="morekomodo-findResultsHistoryTreechildren"
                   ondblclick="return moreKomodoFindResultsHistory.onDblClick(event)"/>
             </tree>
-        </tabpanel>
-    </tabpanels>
+        </browser>
+    </ko-pane>
 </overlay>
