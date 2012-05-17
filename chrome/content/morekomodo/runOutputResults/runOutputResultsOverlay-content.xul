@@ -2,9 +2,21 @@
 
 <!DOCTYPE overlay SYSTEM "chrome://morekomodo/locale/morekomodo.dtd" >
 <?xml-stylesheet href="chrome://morekomodo/skin/morekomodo.css" type="text/css"?>
+<?xml-stylesheet href="chrome://morekomodo/skin/findresults.css" type="text/css"?>
 
 <overlay id="runOutputOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script type="application/x-javascript"
+            src="chrome://morekomodo/content/common.js" />
+    <script type="application/x-javascript"
+            src="chrome://morekomodo/content/prefs.js" />
+    <script type="application/x-javascript"
+            src="chrome://morekomodo/content/util/textutil.js" />
+    <script type="application/x-javascript"
+            src="chrome://morekomodo/content/findResults/util.js" />
+    <script type="application/x-javascript"
+            src="chrome://morekomodo/content/runOutputResults/runOutputResults.js" />
 
     <hbox id="runoutput-button-box">
         <button
