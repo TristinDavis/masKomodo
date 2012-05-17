@@ -79,8 +79,7 @@ var moreKomodoRunOutputResults = {
                        "runoutput-morekomodo-toolbar-copy"];
 
         for (var i in buttons) {
-            var pane = document.getElementById("runoutput-desc-tabpanel");
-            var button = pane.contentDocument.getElementById(buttons[i]);
+            var button = document.getElementById(buttons[i]);
             if (isEnabled) {
                 button.removeAttribute("disabled");
             } else {
