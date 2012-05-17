@@ -36,11 +36,11 @@
                 <menuitem id="runoutput-morekomodo-copytoviewfilenames"
                     label="&findresults.copy.to.view.filenames;"
                     key="key_cmd_morekomodo_copyRunOutputToViewFileNames"
-                    command="cmd_morekomodo_copyRunOutputToViewFileNames"/>
+                    command="top.cmd_morekomodo_copyRunOutputToViewFileNames"/>
                 <menuitem id="runoutput-morekomodo-copytoviewcontents"
                     label="&findresults.copy.to.view.contents;"
                     key="key_cmd_morekomodo_copyRunOutputToViewContents"
-                    command="cmd_morekomodo_copyRunOutputToViewContents"/>
+                    command="top.cmd_morekomodo_copyRunOutputToViewContents"/>
                 <menuitem id="runoutput-morekomodo-copytoviewcustom"
                     label="&findresults.use.custom.format;"
                     oncommand="top.moreKomodoRunOutputResults.onCopyToViewCustomFindResults(false);"/>

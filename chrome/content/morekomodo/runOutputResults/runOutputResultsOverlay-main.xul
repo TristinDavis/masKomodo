@@ -2,6 +2,8 @@
 
 <!DOCTYPE overlay SYSTEM "chrome://morekomodo/locale/morekomodo.dtd" >
 <?xml-stylesheet href="chrome://morekomodo/skin/morekomodo.css" type="text/css"?>
+<?xml-stylesheet href="chrome://morekomodo/skin/findresults.css" type="text/css"?>
+
 
 <overlay id="runOutputOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
@@ -39,13 +41,13 @@
         <popup id="moreKomodoRunOutputResultsContext">
             <menuitem id="runoutput-morekomodo-context-menu-openselectedfiles"
                 label="&findresults.open.selected.files;"
-                oncommand="top.moreKomodoRunOutputResults.onOpenFoundFiles(true);"/>
+                oncommand="moreKomodoRunOutputResults.onOpenFoundFiles(true);"/>
             <menuitem id="runoutput-morekomodo-context-menu-copytoviewfilenames"
                 label="&findresults.copy.selected.filenames;"
-                oncommand="top.moreKomodoRunOutputResults.onCopyToViewRunOutputResults(true, true)"/>
+                oncommand="moreKomodoRunOutputResults.onCopyToViewRunOutputResults(true, true)"/>
             <menuitem id="runoutput-morekomodo-context-menu-copytoviewcontents"
                 label="&findresults.copy.selected.contents;"
-                oncommand="top.moreKomodoRunOutputResults.onCopyToViewRunOutputResults(false, true)"/>
+                oncommand="moreKomodoRunOutputResults.onCopyToViewRunOutputResults(false, true)"/>
             <menuitem id="runoutput-morekomodo-context-menu-copytoviewcustom"
                 label="&findresults.use.custom.format;"
                 oncommand="top.moreKomodoRunOutputResults.onCopyToViewCustomFindResults(true);"/>
