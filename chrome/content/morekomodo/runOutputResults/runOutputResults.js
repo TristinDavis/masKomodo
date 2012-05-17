@@ -37,7 +37,7 @@
 var moreKomodoRunOutputResults = {
     onLoad : function() {
         //CH  Added pane to accomodate separation in document to contentDocument
-        
+
         var pane = document.getElementById("runoutput-desc-tabpanel");
         var listButtonWidget = pane.contentDocument.getElementById("runoutput-list-button");
 
@@ -52,7 +52,7 @@ var moreKomodoRunOutputResults = {
             listButtonWidget.addEventListener("DOMAttrModified",
                         this.handle_copy_setup,
                         false);
-        }
+            }
 
         // Allow to select items to copy
         //CH  Added pane to accomodate separation in document to contentDocument

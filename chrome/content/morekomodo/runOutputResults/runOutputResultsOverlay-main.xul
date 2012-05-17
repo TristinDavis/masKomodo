@@ -34,21 +34,21 @@
                 desc="&morekomodo.runoutputresults.copyToViewContents.desc;"
                 oncommand="goDoCommand('cmd_morekomodo_copyRunOutputToViewContents')"/>
     </broadcasterset>
-    
+
     <popupset id="extensionPopupSet">
         <popup id="moreKomodoRunOutputResultsContext">
             <menuitem id="runoutput-morekomodo-context-menu-openselectedfiles"
                 label="&findresults.open.selected.files;"
-                oncommand="moreKomodoRunOutputResults.onOpenFoundFiles(true);"/>
+                oncommand="top.moreKomodoRunOutputResults.onOpenFoundFiles(true);"/>
             <menuitem id="runoutput-morekomodo-context-menu-copytoviewfilenames"
                 label="&findresults.copy.selected.filenames;"
-                oncommand="moreKomodoRunOutputResults.onCopyToViewRunOutputResults(true, true)"/>
+                oncommand="top.moreKomodoRunOutputResults.onCopyToViewRunOutputResults(true, true)"/>
             <menuitem id="runoutput-morekomodo-context-menu-copytoviewcontents"
                 label="&findresults.copy.selected.contents;"
-                oncommand="moreKomodoRunOutputResults.onCopyToViewRunOutputResults(false, true)"/>
+                oncommand="top.moreKomodoRunOutputResults.onCopyToViewRunOutputResults(false, true)"/>
             <menuitem id="runoutput-morekomodo-context-menu-copytoviewcustom"
                 label="&findresults.use.custom.format;"
-                oncommand="moreKomodoRunOutputResults.onCopyToViewCustomFindResults(true);"/>
+                oncommand="top.moreKomodoRunOutputResults.onCopyToViewCustomFindResults(true);"/>
         </popup>
     </popupset>
 </overlay>
