@@ -9,10 +9,10 @@ overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/findResul
 overlay	chrome://komodo/content/find/find2.xul	chrome://morekomodo/content/favorites/find/findOverlay.xul
 
 overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/runOutputResults/runOutputResultsOverlay.xul appversion<7b1
-overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/runOutputResults/runOutputResultsOverlay-main.xul appversion>7b1
-overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/runOutputResults/runOutputResultsOverlay-content.xul appversion>7b1
+overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/runOutputResults/runOutputResultsOverlay-main.xul appversion>=7b1
+overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/runOutputResults/runOutputResultsOverlay-content.xul appversion>=7b1
 
 overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/codeConversionOverlay-ko6.xul appversion<7b1
-overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/codeConversionOverlay-ko7.xul appversion>7b1
+overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/codeConversionOverlay-ko7.xul appversion>=7b1
 
 locale	morekomodo	en-US	jar:chrome/morekomodo.jar!/locale/en-US/morekomodo/
