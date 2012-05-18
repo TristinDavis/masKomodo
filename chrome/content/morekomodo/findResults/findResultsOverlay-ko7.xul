@@ -217,47 +217,9 @@
     <ko-pane id="workspace_bottom_area">
         <browser id="morekomodo_findresults_history_tabpanel"
                   orient="vertical"
-                  flex="1">
-            <hbox>
-                <label />
-                <separator flex="1"/>
-                <button
-                        id="morekomodo-findresults-history-delete"
-                        class="button-findresults-history-delete button-toolbar-a"
-                        tooltiptext="&findresults.history.delete.tooltip;"
-                        disabled="false"
-                        oncommand="moreKomodoFindResultsHistory.deleteSelectedItems()" />
-                <button
-                        id="morekomodo-findresults-history-disable"
-                        class="button-findresults-history-disable button-toolbar-a"
-                        tooltiptext="&findresults.history.disable.tooltip;"
-                        persist="off"
-                        oncommand="moreKomodoFindResultsHistory.toggleDisableHistory()" />
-            </hbox>
-            <tree id="morekomodo-findResultsHistory-tree"
-                  hidecolumnpicker="true"
-                  flex="1">
-                <treecols>
-                    <treecol id="morekomodo-findResultsHistoryUrl"
-                             label="&findresults.history.file.label;"
-                             primary="true"
-                             crop="left"
-                             persist="width"
-                             flex="5"/>
-                    <splitter class="tree-splitter"/>
-                    <treecol id="morekomodo-findResultsHistoryLine"
-                             label="&findresults.history.line.label;"
-                             persist="width"
-                             flex="1"/>
-                    <splitter class="tree-splitter"/>
-                    <treecol id="morekomodo-findResultsHistoryContent"
-                             label="&findresults.history.content.label;"
-                             persist="width"
-                             flex="1"/>
-                </treecols>
-                <treechildren id="morekomodo-findResultsHistoryTreechildren"
-                  ondblclick="return moreKomodoFindResultsHistory.onDblClick(event)"/>
-            </tree>
+                  flex="1"
+                  src="findResultsOverlay-history.xul"
+                  label="&findresults.history.file.label;">
         </browser>
     </ko-pane>
 </overlay>
