@@ -215,10 +215,11 @@
     </tabs>
 
     <ko-pane id="workspace_bottom_area">
-        <browser id="morekomodo_findresults_history_tabpanel"
+        <browser type="ko-widget"
+                 id="morekomodo_findresults_history_tabpanel"
                   orient="vertical"
                   flex="1"
-                  src="findResultsOverlay-history.xul"
+                  src="chrome://morekomodo/content/findResults/findResultsOverlay-history.xul"
                   label="&findresults.history.file.label;">
         </browser>
     </ko-pane>
