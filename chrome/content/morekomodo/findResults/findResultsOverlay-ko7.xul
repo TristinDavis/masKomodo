@@ -6,18 +6,6 @@
 <overlay id="findresultsOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-    <script type="application/x-javascript"
-            src="chrome://morekomodo/content/common.js" />
-    <script type="application/x-javascript"
-            src="chrome://morekomodo/content/prefs.js" />
-    <script type="application/x-javascript"
-            src="chrome://morekomodo/content/util/textutil.js" />
-    <script type="application/x-javascript"
-            src="chrome://morekomodo/content/findResults/util.js" />
-    <script type="application/x-javascript"
-            src="chrome://morekomodo/content/findResults/history.js" />
-    <script type="application/x-javascript"
-            src="chrome://morekomodo/content/findResults/findResults.js" />
 
     <broadcasterset id="broadcasterset_global">
         <broadcaster
@@ -219,7 +207,7 @@
                  id="morekomodo_findresults_history_tabpanel"
                   orient="vertical"
                   flex="1"
-                  src="chrome://morekomodo/content/findResults/findResultsOverlay-history.xul"
+                  src="chrome://morekomodo/content/findResults/findResults-pane-history.xul"
                   label="&findresults.history.file.label;">
         </browser>
     </ko-pane>

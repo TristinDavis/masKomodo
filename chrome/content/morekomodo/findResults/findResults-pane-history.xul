@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://morekomodo/locale/morekomodo.dtd" >
+<?xml-stylesheet href="chrome://morekomodo/skin/morekomodo.css" type="text/css"?>
+<?xml-stylesheet href="chrome://morekomodo/skin/findresults.css" type="text/css"?>
+
+<page   id="findresultsOverlayHistory"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script type="application/x-javascript"
+            src="chrome://morekomodo/content/common.js" />
+    <script type="application/x-javascript"
+            src="chrome://morekomodo/content/prefs.js" />
+    <script type="application/x-javascript"
+            src="chrome://morekomodo/content/util/textutil.js" />
+    <script type="application/x-javascript"
+            src="chrome://morekomodo/content/findResults/util.js" />
+    <script type="application/x-javascript"
+            src="chrome://morekomodo/content/findResults/history.js" />
+
+    <hbox>
+        <label />
+        <separator flex="1"/>
+        <button
+                id="morekomodo-findresults-history-delete"
+                class="button-findresults-history-delete button-toolbar-a"
+                tooltiptext="&findresults.history.delete.tooltip;"
+                disabled="false"
+                oncommand="moreKomodoFindResultsHistory.deleteSelectedItems()" />
+        <button
+                id="morekomodo-findresults-history-disable"
+                class="button-findresults-history-disable button-toolbar-a"
+                tooltiptext="&findresults.history.disable.tooltip;"
+                persist="off"
+                oncommand="moreKomodoFindResultsHistory.toggleDisableHistory()" />
+    </hbox>
+    <tree id="morekomodo-findResultsHistory-tree"
+          hidecolumnpicker="true"
+          flex="1">
+        <treecols>
+            <treecol id="morekomodo-findResultsHistoryUrl"
+                     label="&findresults.history.file.label;"
+                     primary="true"
+                     crop="left"
+                     persist="width"
+                     flex="5"/>
+            <splitter class="tree-splitter"/>
+            <treecol id="morekomodo-findResultsHistoryLine"
+                     label="&findresults.history.line.label;"
+                     persist="width"
+                     flex="1"/>
+            <splitter class="tree-splitter"/>
+            <treecol id="morekomodo-findResultsHistoryContent"
+                     label="&findresults.history.content.label;"
+                     persist="width"
+                     flex="1"/>
+        </treecols>
+        <treechildren id="morekomodo-findResultsHistoryTreechildren"
+          ondblclick="return moreKomodoFindResultsHistory.onDblClick(event)"/>
+    </tree>
+</page>

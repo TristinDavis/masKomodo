@@ -38,8 +38,9 @@ var moreKomodoFindResults = {
     init : function() {
         for (var i = 1; i <= 2; i++) {
             //CH  Added pane to accomodate separation in document to contentDocument
-            var pane = document.getElementById("findresults" + i + "_tabpanel");
-            var stopButton = pane.contentDocument.getElementById("findresults-stopsearch-button");
+
+            //var pane = document.getElementById("findresults" + i + "_tabpanel");
+            var stopButton = document.getElementById("findresults-stopsearch-button");
             if (stopButton) {
                 stopButton.addEventListener("DOMAttrModified",
                             moreKomodoFindResults.handleRefreshStatus,
@@ -49,7 +50,7 @@ var moreKomodoFindResults = {
             // Allow to select items to copy
             //CH  Added pane to accomodate separation in document to contentDocument
             var pane = document.getElementById("findresults" + i + "_tabpanel");
-            var treeWidget = pane.contentDocument.getElementById("findresults-body");
+            var treeWidget = document.getElementById("findresults-body");
             treeWidget.setAttribute("seltype", "multiple");
             treeWidget.setAttribute("context", "moreKomodofindResultsContext" + i);
         }

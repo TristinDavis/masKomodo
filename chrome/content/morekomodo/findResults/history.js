@@ -38,7 +38,8 @@ var moreKomodoFindResultsHistory = {
     treeView : null,
 
     init : function() {
-        this.treeWidget = document.getElementById("morekomodo-findResultsHistory-tree");
+        this.pane = document.getElementById("morekomodo_findresults_history_tabpanel");
+        this.treeWidget = this.pane.contentDocument.getElementById("morekomodo-findResultsHistory-tree");
         this.treeView = new moreKomodoFindResultsHistoryTreeView(this.treeWidget);
         this.disableButton = document.getElementById("morekomodo-findresults-history-disable");
     },
@@ -468,4 +469,3 @@ moreKomodoFindResultsHistoryTreeView.prototype = {
         }
     }
 };
-
