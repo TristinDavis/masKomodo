@@ -2,7 +2,8 @@
 
 <!DOCTYPE overlay SYSTEM "chrome://morekomodo/locale/morekomodo.dtd" >
 
-<xul:page>
+<page   id="findresultsOverlayHistory"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
     <hbox>
         <label />
         <separator flex="1"/>
@@ -43,4 +44,4 @@
         <treechildren id="morekomodo-findResultsHistoryTreechildren"
           ondblclick="return moreKomodoFindResultsHistory.onDblClick(event)"/>
     </tree>
-</xul:page>
+</page>
