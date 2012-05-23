@@ -7,19 +7,6 @@
 <page   id="findresultsOverlayHistory"
             xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-    <script type="application/x-javascript"
-            src="chrome://morekomodo/content/common.js" />
-    <script type="application/x-javascript"
-            src="chrome://morekomodo/content/prefs.js" />
-    <script type="application/x-javascript"
-            src="chrome://morekomodo/content/util/textutil.js" />
-    <script type="application/x-javascript"
-            src="chrome://morekomodo/content/findResults/util.js" />
-    <script type="application/x-javascript"
-            src="chrome://morekomodo/content/findResults/findResults.js" />
-    <script type="application/x-javascript"
-            src="chrome://morekomodo/content/findResults/history.js" />
-
     <hbox>
         <label />
         <separator flex="1"/>
@@ -28,13 +15,13 @@
                 class="button-findresults-history-delete button-toolbar-a"
                 tooltiptext="&findresults.history.delete.tooltip;"
                 disabled="false"
-                oncommand="moreKomodoFindResultsHistory.deleteSelectedItems()" />
+                oncommand="top.moreKomodoFindResultsHistory.deleteSelectedItems()" />
         <button
                 id="morekomodo-findresults-history-disable"
                 class="button-findresults-history-disable button-toolbar-a"
                 tooltiptext="&findresults.history.disable.tooltip;"
                 persist="off"
-                oncommand="moreKomodoFindResultsHistory.toggleDisableHistory()" />
+                oncommand="top.moreKomodoFindResultsHistory.toggleDisableHistory()" />
     </hbox>
     <tree id="morekomodo-findResultsHistory-tree"
           hidecolumnpicker="true"
@@ -58,6 +45,6 @@
                      flex="1"/>
         </treecols>
         <treechildren id="morekomodo-findResultsHistoryTreechildren"
-          ondblclick="return moreKomodoFindResultsHistory.onDblClick(event)"/>
+          ondblclick="return top.moreKomodoFindResultsHistory.onDblClick(event)"/>
     </tree>
 </page>

@@ -36,10 +36,10 @@
 */
 var moreKomodoFindResults = {
     init : function() {
-        for (var i = 1; i <= 2; i++) {
+        //for (var i = 1; i <= 2; i++) {
             //CH  Added pane to accomodate separation in document to contentDocument
-
             //var pane = document.getElementById("findresults" + i + "_tabpanel");
+
             var stopButton = document.getElementById("findresults-stopsearch-button");
             if (stopButton) {
                 stopButton.addEventListener("DOMAttrModified",
@@ -49,11 +49,10 @@ var moreKomodoFindResults = {
 
             // Allow to select items to copy
             //CH  Added pane to accomodate separation in document to contentDocument
-            var pane = document.getElementById("findresults" + i + "_tabpanel");
             var treeWidget = document.getElementById("findresults-body");
             treeWidget.setAttribute("seltype", "multiple");
-            treeWidget.setAttribute("context", "moreKomodofindResultsContext" + i);
-        }
+            treeWidget.setAttribute("context", "moreKomodofindResultsContext");
+        //}
         this.arrFind = [];
         this.findStartedFromUI = true;
         // Contains the last options set into Find dialog
@@ -62,7 +61,7 @@ var moreKomodoFindResults = {
         this._findSvc = Components.classes["@activestate.com/koFindService;1"].
                getService(Components.interfaces.koIFindService);
 
-        moreKomodoFindResultsHistory.init();
+        //top.moreKomodoFindResultsHistory.init();
         window.controllers.appendController(this);
      },
 
@@ -117,7 +116,7 @@ var moreKomodoFindResults = {
                     moreKomodoFindResults.lastUsedFindOptions,
                     moreKomodoFindResults._findSvc.options);
 
-                    moreKomodoFindResultsHistory.saveHistory(
+                    top.moreKomodoFindResultsHistory.saveHistory(
                                     idName.match("([0-9]+)")[1],
                                     moreKomodoFindResults.lastUsedFindOptions);
                 }, 400);
@@ -142,7 +141,7 @@ var moreKomodoFindResults = {
             MoreKomodoCommon.log("Unable to find tabIndex for id " + id);
         }
     },
-
+    // FindResultsTab_GetManager(tabIndex) functions differently/doesn't exisit/etc.
     onOpenFoundFiles : function(tabIndex, useSelectedItems) {
         var view = FindResultsTab_GetManager(tabIndex).view;
         var columnId = this.getColumnIdFromType(tabIndex, moreKomodoFindResultsUtil.FILE_PATH);

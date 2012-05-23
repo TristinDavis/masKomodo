@@ -128,7 +128,7 @@ var moreKomodo = {
 
                         // /opt/devel/mozilla/komodo/openkomodo/src/chrome/komodo/content/bindings/views-browser.xml
                         // /opt/devel/mozilla/komodo/openkomodo/src/chrome/komodo/content/bindings/views-editor.p.xml
-			
+
                         if (view.preview) {
 			    //CH
 			    var koDoc = view.document || view.koDoc;
@@ -217,15 +217,19 @@ var moreKomodo = {
         var views = ko.views.manager.topView.findViewsForURI(uri);
         // Get cached file informations
 	// CH
+	var view = views[0];
+	if (!view){
+	    return;
+	}
 	if ("document" in view){
-	    if (views.length > 0 && views[0].document.file.isRemoteFile) {
-		fileEx = views[0].document.file;
+	    if (view.document.file.isRemoteFile) {
+		fileEx = view.document.file;
 	    } else {
 		fileEx = MoreKomodoCommon.makeIFileExFromURI(uri);
 	    }
 	} else{
-	    if (views.length > 0 && views[0].koDoc.file.isRemoteFile) {
-		fileEx = views[0].koDoc.file;
+	    if (view.koDoc.file.isRemoteFile) {
+		fileEx = view.koDoc.file;
 	    } else {
 		fileEx = MoreKomodoCommon.makeIFileExFromURI(uri);
 	    }
@@ -268,7 +272,7 @@ var moreKomodo = {
 	    }
 	}
         return true;
-    },        
+    },
 
     onRenameFile : function() {
         var currView = ko.views.manager.currentView;
@@ -607,7 +611,7 @@ var moreKomodo = {
 		//	return !(view.document.isUntitled
 		//		|| view.getAttribute("type") != "editor");
 		//    }
-		//}else{    
+		//}else{
 		//    if (view && view.koDoc) {
 		//	return !(view.koDoc.isUntitled
 		//		|| view.getAttribute("type") != "editor");
@@ -618,7 +622,7 @@ var moreKomodo = {
             case "cmd_morekomodo_showInFileManager":
             case "cmd_morekomodo_makeBackup":
                 // These commands aren't supported on remote
-		//CH 
+		//CH
 		if (view) {
 		    var koDoc = view.document || view.koDoc;
 		    if(koDoc){
@@ -627,7 +631,7 @@ var moreKomodo = {
 				|| koDoc.file.isRemoteFile);
 		    }
 		}	//CH
-		        
+
 		return false;
             case "cmd_morekomodo_pastehtml":
                 return MoreKomodoCommon.hasClipboardHtml();
@@ -746,7 +750,7 @@ var moreKomodo = {
             return;
         } else if (this._koPrefs.getBooleanPref('editSmartCutCopyWithoutSelection')) {
             var curr = "";
-            
+
             // save current clipboard content before the cut
             if (MoreKomodoCommon.hasDataMatchingFlavors(["text/unicode"])) {
                 curr = MoreKomodoCommon.pasteFromClipboard();

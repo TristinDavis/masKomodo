@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://morekomodo/locale/morekomodo.dtd" >
+<?xml-stylesheet href="chrome://morekomodo/skin/findresults.css" type="text/css"?>
+
+<overlay id="findresultsOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script type="application/x-javascript"
+        src="chrome://morekomodo/content/findResults/history.js" />
+
+
+    <menupopup id="menu_view_tabs_popup">
+        <menuitem id="show_morekomodo_findresults_history_tab2"
+            observes="show_morekomodo_findresults_history_tab"
+            class="menuitem-iconic-wide"
+            oncommand="ko.uilayout.ensureTabShown('morekomodo_findresults_history_tab', true)"
+            label="&findresults.history.label;"
+            type="checkbox"
+            />
+    </menupopup>
+
+    <menupopup id="tabPicker_popup">
+        <menuitem id="show_morekomodo_findresults_history_tab"
+            oncommand="ko.uilayout.ensureTabShown('morekomodo_findresults_history_tab', true)"
+            label="&findresults.history.label;"
+            type="checkbox"
+            />
+    </menupopup>
+
+    <tabs id="output_tabs">
+        <tab id="morekomodo_findresults_history_tab"
+            label="&findresults.history.label;"
+             onmousedown="document.getElementById('morekomodo-findResultsHistoryTreechildren').focus();"
+             onfocus="document.getElementById('morekomodo-findResultsHistoryTreechildren').focus();" />
+    </tabs>
+
+    <ko-pane id="workspace_bottom_area">
+        <browser type="ko-widget"
+                 id="morekomodo_findresults_history_tabpanel"
+                  orient="vertical"
+                  flex="1"
+                  src="chrome://morekomodo/content/findResults/findResults-pane-history.xul"
+                  label="&findresults.history.file.label;">
+        </browser>
+    </ko-pane>
+</overlay>

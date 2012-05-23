@@ -38,10 +38,10 @@ var moreKomodoFindResultsHistory = {
     treeView : null,
 
     init : function() {
-
-        this.treeWidget = this.pane.contentDocument.getElementById("morekomodo-findResultsHistory-tree");
+        var pane = document.getElementById("morekomodo_findresults_history_tabpanel");
+        this.treeWidget = pane.contentDocument.getElementById("morekomodo-findResultsHistory-tree");
         this.treeView = new moreKomodoFindResultsHistoryTreeView(this.treeWidget);
-        this.disableButton = document.getElementById("morekomodo-findresults-history-disable");
+        this.disableButton = pane.contentDocument.getElementById("morekomodo-findresults-history-disable");
     },
 
     saveHistory : function(tabIndex, findOptions) {
@@ -469,3 +469,4 @@ moreKomodoFindResultsHistoryTreeView.prototype = {
         }
     }
 };
+window.addEventListener("load", function(event) { moreKomodoFindResultsHistory.init(event); }, false);
