@@ -38,7 +38,7 @@ var moreKomodoFindResults = {
     init : function() {
         //for (var i = 1; i <= 2; i++) {
             //CH  Added pane to accomodate separation in document to contentDocument
-            //var pane = document.getElementById("findresults" + i + "_tabpanel");
+            var pane = document.getElementById("findresults1_tabpanel");
 
             var stopButton = document.getElementById("findresults-stopsearch-button");
             if (stopButton) {
@@ -49,7 +49,7 @@ var moreKomodoFindResults = {
 
             // Allow to select items to copy
             //CH  Added pane to accomodate separation in document to contentDocument
-            var treeWidget = document.getElementById("findresults-body");
+            var treeWidget = pane.contentDocument.getElementById("findresults-body");
             treeWidget.setAttribute("seltype", "multiple");
             treeWidget.setAttribute("context", "moreKomodofindResultsContext");
         //}
