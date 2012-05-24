@@ -5,6 +5,7 @@ skin	morekomodo	classic/1.0	jar:chrome/morekomodo.jar!/skin/classic/morekomodo/
 overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/morekomodoOverlay.xul
 overlay	chrome://komodo/content/pref/pref.xul	chrome://morekomodo/content/pref/prefOverlay.xul
 overlay	chrome://komodo/content/dialogs/filebrowser/filebrowser.xul	chrome://morekomodo/content/favorites/filebrowser/filebrowserOverlay.xul
+
 overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/findResults/findResultsOverlay-ko5.xul appversion<6b1
 overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/findResults/findResultsOverlay-ko6.xul appversion<7b1
 overlay	chrome://komodo/content/find/findResultsTab.xul	chrome://morekomodo/content/findResults/findResultsOverlay-ko7.xul appversion>=7b1

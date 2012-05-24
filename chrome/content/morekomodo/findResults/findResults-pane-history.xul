@@ -15,13 +15,13 @@
                 class="button-findresults-history-delete button-toolbar-a"
                 tooltiptext="&findresults.history.delete.tooltip;"
                 disabled="false"
-                oncommand="top.moreKomodoFindResultsHistory.deleteSelectedItems()" />
+                oncommand="window.top.moreKomodoFindResultsHistory.deleteSelectedItems()" />
         <button
                 id="morekomodo-findresults-history-disable"
                 class="button-findresults-history-disable button-toolbar-a"
                 tooltiptext="&findresults.history.disable.tooltip;"
                 persist="off"
-                oncommand="top.moreKomodoFindResultsHistory.toggleDisableHistory()" />
+                oncommand="window.top.moreKomodoFindResultsHistory.toggleDisableHistory()" />
     </hbox>
     <tree id="morekomodo-findResultsHistory-tree"
           hidecolumnpicker="true"
