@@ -1,6 +1,16 @@
 <?xml version="1.0"?>
 
 <!DOCTYPE overlay SYSTEM "chrome://morekomodo/locale/morekomodo.dtd" >
+<?xml-stylesheet href="chrome://komodo/skin/komodo.css" type="text/css"?>
+<?xml-stylesheet href="chrome://komodo/skin/global/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://komodo/skin/bindings/scrolltabs.css" type="text/css"?>
+<?xml-stylesheet href="chrome://komodo/skin/bindings/sidebar.css" type="text/css"?>
+<?xml-stylesheet href="chrome://komodo/skin/bindings/views.css" type="text/css"?>
+<?xml-stylesheet href="chrome://komodo/skin/bindings/widgets.css" type="text/css"?>
+<?xml-stylesheet href="chrome://komodo/skin/toolbar.css" type="text/css"?>
+<?xml-stylesheet href="chrome://komodo/skin/platform.css" type="text/css"?>
+
+<?xml-stylesheet href="chrome://morekomodo/skin/morekomodo.css" type="text/css"?>
 <?xml-stylesheet href="chrome://morekomodo/skin/findresults.css" type="text/css"?>
 
 <overlay id="findresultsOverlay"

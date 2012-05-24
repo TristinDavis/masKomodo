@@ -356,7 +356,7 @@ var moreKomodoFindResults = {
     onCopyToViewCustomFindResults : function(tabIndex, useSelectedItems) {
         var self = this;
         moreKomodoFindResultsUtil.onCopyToViewCustomFindResults(
-                    FindResultsTab_GetManager(tabIndex).view,
+                    ko.findresults.getManager(tabIndex).view,
                     function(resultType) {
                         return self.getColumnIdFromType(tabIndex, resultType);
                     },

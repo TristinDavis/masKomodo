@@ -6,6 +6,8 @@
 <overlay id="findresultsOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
     <script type="application/x-javascript"
+            src="chrome://morekomodo/content/prefs.js" />
+    <script type="application/x-javascript"
             src="chrome://morekomodo/content/common.js" />
     <script type="application/x-javascript"
             src="chrome://morekomodo/content/findResults/util.js" />
