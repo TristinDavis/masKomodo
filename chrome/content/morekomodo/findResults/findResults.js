@@ -326,7 +326,7 @@ var moreKomodoFindResults = {
 
     get selectedTabManagerIndex() {
         for (var i = 1; i <= 2; i++) {
-            var tab = document.getElementById("findresults" + i +"_tab");
+            var tab = top.document.getElementById("findresults" + i +"_tabpanel");
             if (tab
                 && !tab.hasAttribute("collapsed")
                 && !tab.hasAttribute("hidden")
@@ -336,20 +336,20 @@ var moreKomodoFindResults = {
         }
         return -1;
     },
-
+// refactor to remove tabindex.
     getColumnIdFromType : function(tabIndex, resultType) {
         switch (resultType) {
             case moreKomodoFindResultsUtil.LINE_NUMBER:
-                return "findresults" + tabIndex + "-linenum";
+                return "findresults-linenum";
                 break;
             case moreKomodoFindResultsUtil.FILE_PATH:
-                return "findresults" + tabIndex + "-filename";
+                return "findresults-filename";
                 break;
             case moreKomodoFindResultsUtil.CONTENT:
-                return "findresults" + tabIndex + "-context";
+                return "findresults-context";
                 break;
         }
-        return "findresults" + tabIndex + "-context";
+        return "findresults-context";
     },
 
     onCopyToViewCustomFindResults : function(tabIndex, useSelectedItems) {
