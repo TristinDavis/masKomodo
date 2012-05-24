@@ -127,7 +127,7 @@ var moreKomodoFindResults = {
         var tabIndex = id.match("([0-9]+)");
 
         if (tabIndex.length > 0) {
-            var tab = FindResultsTab_GetManager(tabIndex[1]);
+            var tab = ko.findresults.getManager(tabIndex[1]);
 
             var findInfo = {
                     options : {},
@@ -141,9 +141,8 @@ var moreKomodoFindResults = {
             MoreKomodoCommon.log("Unable to find tabIndex for id " + id);
         }
     },
-    // FindResultsTab_GetManager(tabIndex) functions differently/doesn't exisit/etc.
     onOpenFoundFiles : function(tabIndex, useSelectedItems) {
-        var view = FindResultsTab_GetManager(tabIndex).view;
+        var view = ko.findresults.getManager(tabIndex).view;
         var columnId = this.getColumnIdFromType(tabIndex, moreKomodoFindResultsUtil.FILE_PATH);
 
         moreKomodoFindResultsUtil.openFiles(view, columnId, useSelectedItems);
@@ -166,7 +165,7 @@ var moreKomodoFindResults = {
             sel = ko.interpolate.getWordUnderCursor(scimoz);
         }
         if (sel.length) {
-            var tab = FindResultsTab_GetManager(tabIndex);
+            var tab = ko.findresults.getManager(tabIndex);
             var options = this.arrFind[this.arrFind.length - 1].options;
             if (options.patternType == Components.interfaces.koIFindOptions.FOT_REGEX_PYTHON) {
                 tab._pattern = convertGlobMetaCharsToRegexpMetaChars(sel);
@@ -258,7 +257,7 @@ var moreKomodoFindResults = {
     },
 
     onCopyToViewFindResults : function(tabIndex, copyFileNames, useSelectedItems) {
-        var view = FindResultsTab_GetManager(tabIndex).view;
+        var view = ko.findresults.getManager(tabIndex).view;
         var type = copyFileNames
                         ? moreKomodoFindResultsUtil.FILE_PATH
                         : moreKomodoFindResultsUtil.CONTENT;

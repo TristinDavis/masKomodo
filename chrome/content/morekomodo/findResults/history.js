@@ -49,7 +49,7 @@ var moreKomodoFindResultsHistory = {
             return;
         }
         var results = [];
-        var findResultsTree = FindResultsTab_GetManager(tabIndex);
+        var findResultsTree = ko.findresults.getManager(tabIndex);
         var view = findResultsTree.view;
         var columnId = {id : "findresults" + tabIndex + "-context"};
 
