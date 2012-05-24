@@ -21,3 +21,4 @@ overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/codeConve
 overlay	chrome://komodo/content/komodo.xul	chrome://morekomodo/content/codeConversionOverlay-ko7.xul appversion>=7b1
 
 locale	morekomodo	en-US	jar:chrome/morekomodo.jar!/locale/en-US/morekomodo/
+

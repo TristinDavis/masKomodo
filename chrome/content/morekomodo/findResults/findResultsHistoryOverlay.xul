@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
 <!DOCTYPE overlay SYSTEM "chrome://morekomodo/locale/morekomodo.dtd" >
+
 <?xml-stylesheet href="chrome://komodo/skin/komodo.css" type="text/css"?>
 <?xml-stylesheet href="chrome://komodo/skin/global/global.css" type="text/css"?>
 <?xml-stylesheet href="chrome://komodo/skin/bindings/scrolltabs.css" type="text/css"?>
@@ -9,7 +10,6 @@
 <?xml-stylesheet href="chrome://komodo/skin/bindings/widgets.css" type="text/css"?>
 <?xml-stylesheet href="chrome://komodo/skin/toolbar.css" type="text/css"?>
 <?xml-stylesheet href="chrome://komodo/skin/platform.css" type="text/css"?>
-
 <?xml-stylesheet href="chrome://morekomodo/skin/morekomodo.css" type="text/css"?>
 <?xml-stylesheet href="chrome://morekomodo/skin/findresults.css" type="text/css"?>
 
@@ -51,7 +51,7 @@
                   orient="vertical"
                   flex="1"
                   src="chrome://morekomodo/content/findResults/findResults-pane-history.xul"
-                  label="&findresults.history.file.label;">
+                  label="&findresults.history.label;">
         </browser>
     </ko-pane>
 </overlay>
