@@ -39,6 +39,8 @@ var moreKomodoFindResults = {
         //for (var i = 1; i <= 2; i++) {
             //CH  Added pane to accomodate separation in document to contentDocument
             //var pane = document.getElementById("findresults_tabpanel-toolbarbox");
+            var log = ko.logging.getLogger("morekomodo");
+            log.setLevel(ko.logging.LOG_DEBUG);
 
             var stopButton = document.getElementById("findresults-stopsearch-button");
             if (stopButton) {
@@ -154,6 +156,7 @@ var moreKomodoFindResults = {
         if (!(view
               //CH
               //ref: http://code.activestate.com/lists/komodo-beta/4456/
+              //I made a mistake before and used var within the assignment
               && (koDoc = view.document || view.koDoc)
               && (view.getAttribute("type") == "editor"))) {
             return;
@@ -333,10 +336,13 @@ var moreKomodoFindResults = {
                 && tab.selected) {
                 return i;
             }
+            else{
+                //Change to MoreKomodoLogs
+                MoreKomodoCommon.log(i + " tab could not be found. selectedTabManagerIndex(): line 330, findResults.js");
+            }
         }
         return -1;
     },
-// refactor to remove tabindex.
     getColumnIdFromType : function(tabIndex, resultType) {
         switch (resultType) {
             case moreKomodoFindResultsUtil.LINE_NUMBER:

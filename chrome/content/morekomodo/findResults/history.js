@@ -38,6 +38,7 @@ var moreKomodoFindResultsHistory = {
     treeView : null,
 
     init : function() {
+        debugger;
         var pane = document.getElementById("morekomodo_findresults_history_tabpanel");
         this.treeWidget = pane.contentDocument.getElementById("morekomodo-findResultsHistory-tree");
         this.treeView = new moreKomodoFindResultsHistoryTreeView(this.treeWidget);
@@ -51,7 +52,7 @@ var moreKomodoFindResultsHistory = {
         var results = [];
         var findResultsTree = ko.findresults.getManager(tabIndex);
         var view = findResultsTree.view;
-        var columnId = {id : "findresults" + tabIndex + "-context"};
+        var columnId = {id : "findresults-context"};
 
         for (var i = 0; i < view.rowCount; i++) {
             results.push({
@@ -142,8 +143,10 @@ var moreKomodoFindResultsHistory = {
     toggleDisableHistory : function() {
         if (this.disableButton.getAttribute("off") == "true") {
             this.disableButton.setAttribute("off", "false");
+            MoreKomodoCommon.log("DID IT WORK??");
         } else {
             this.disableButton.setAttribute("off", "true");
+            MoreKomodoCommon.log("DID IT WORK??");
         }
     },
 
