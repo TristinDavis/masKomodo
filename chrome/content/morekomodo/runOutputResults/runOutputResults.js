@@ -59,7 +59,7 @@ var moreKomodoRunOutputResults = {
         if (treeWidget) {
             treeWidget.setAttribute("context", "moreKomodoRunOutputResultsContext");
         }
-
+        
         window.controllers.appendController(this);
      },
 

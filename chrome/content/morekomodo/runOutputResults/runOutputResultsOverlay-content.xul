@@ -2,10 +2,12 @@
 
 <!DOCTYPE overlay SYSTEM "chrome://morekomodo/locale/morekomodo.dtd" >
 <?xml-stylesheet href="chrome://morekomodo/skin/morekomodo.css" type="text/css"?>
+
 <?xml-stylesheet href="chrome://morekomodo/skin/findresults.css" type="text/css"?>
 
 <overlay id="runOutputOverlay"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
 
     <script type="application/x-javascript"
             src="chrome://morekomodo/content/common.js" />
@@ -17,6 +19,7 @@
             src="chrome://morekomodo/content/findResults/util.js" />
     <script type="application/x-javascript"
             src="chrome://morekomodo/content/runOutputResults/runOutputResults.js" />
+
 
     <hbox id="runoutput-button-box">
         <button
@@ -36,11 +39,13 @@
                 <menuitem id="runoutput-morekomodo-copytoviewfilenames"
                     label="&findresults.copy.to.view.filenames;"
                     key="key_cmd_morekomodo_copyRunOutputToViewFileNames"
+
                     command="top.cmd_morekomodo_copyRunOutputToViewFileNames"/>
                 <menuitem id="runoutput-morekomodo-copytoviewcontents"
                     label="&findresults.copy.to.view.contents;"
                     key="key_cmd_morekomodo_copyRunOutputToViewContents"
                     command="top.cmd_morekomodo_copyRunOutputToViewContents"/>
+
                 <menuitem id="runoutput-morekomodo-copytoviewcustom"
                     label="&findresults.use.custom.format;"
                     oncommand="top.moreKomodoRunOutputResults.onCopyToViewCustomFindResults(false);"/>
