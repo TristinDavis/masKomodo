@@ -35,10 +35,13 @@
 # ***** END LICENSE BLOCK *****
 */
 var moreKomodoFindResultsHistory = {
+
     treeView : null,
 
     init : function() {
+        //Debugger
         debugger;
+
         var pane = document.getElementById("morekomodo_findresults_history_tabpanel");
         this.treeWidget = pane.contentDocument.getElementById("morekomodo-findResultsHistory-tree");
         this.treeView = new moreKomodoFindResultsHistoryTreeView(this.treeWidget);

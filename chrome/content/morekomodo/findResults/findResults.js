@@ -36,18 +36,20 @@
 */
 var moreKomodoFindResults = {
     init : function() {
+        //Debugger
+        debugger;
         //for (var i = 1; i <= 2; i++) {
             //CH  Added pane to accomodate separation in document to contentDocument
             //var pane = document.getElementById("findresults_tabpanel-toolbarbox");
-            var log = ko.logging.getLogger("morekomodo");
-            log.setLevel(ko.logging.LOG_DEBUG);
+        var log = ko.logging.getLogger("morekomodo");
+        log.setLevel(ko.logging.LOG_DEBUG);
 
-            var stopButton = document.getElementById("findresults-stopsearch-button");
-            if (stopButton) {
-                stopButton.addEventListener("DOMAttrModified",
-                            moreKomodoFindResults.handleRefreshStatus,
-                            false);
-            }
+        var stopButton = document.getElementById("findresults-stopsearch-button");
+        if (stopButton) {
+            stopButton.addEventListener("DOMAttrModified",
+                        moreKomodoFindResults.handleRefreshStatus,
+                        false);
+        }
 
             // Allow to select items to copy
             //CH  Added pane to accomodate separation in document to contentDocument
