@@ -15,4 +15,3 @@ CD ..\morefolders
 CD ..
 DEL moreKomodo-1.8.3.xpi
 MOVE morefolders\moreKomodo-1.8.3.xpi .
-RD morefolders /S
