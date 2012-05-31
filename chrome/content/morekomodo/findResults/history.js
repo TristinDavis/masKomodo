@@ -49,7 +49,11 @@ var moreKomodoFindResultsHistory = {
     },
 
     saveHistory : function(tabIndex, findOptions) {
+        //Debugger
+        debugger;
         if (this.isDisabled) {
+            //Debugger
+            debugger;
             return;
         }
         var results = [];
@@ -85,6 +89,8 @@ var moreKomodoFindResultsHistory = {
     },
 
     buildLabel : function(findInfo) {
+        //Debugger
+        debugger;
         var options = findInfo.options;
         var args = new Array(moreKomodoFindResultsUtil
                                 .createLabelFromFindInfo(findInfo));
@@ -128,6 +134,8 @@ var moreKomodoFindResultsHistory = {
     },
 
     onDblClick : function(event) {
+        //Debugger
+        debugger;
         var item = this.treeView.getSelectedItem();
         if (item && !item.isContainer) {
             this.jumpToFind(item.result);
@@ -136,14 +144,20 @@ var moreKomodoFindResultsHistory = {
     },
 
     deleteSelectedItems : function() {
+        //Debugger
+        debugger;
         this.treeView.deleteIndexes(this.treeView.selectedRootIndexes);
     },
 
     get isDisabled() {
+        //Debugger
+        debugger;
         return this.disableButton.getAttribute("off") == "true";
     },
 
     toggleDisableHistory : function() {
+        //Debugger
+        debugger;
         if (this.disableButton.getAttribute("off") == "true") {
             this.disableButton.setAttribute("off", "false");
             MoreKomodoCommon.log("DID IT WORK??");
@@ -155,6 +169,8 @@ var moreKomodoFindResultsHistory = {
 
     // Adapted form FindResultsTabManager.prototype._doubleClick
     jumpToFind : function(result) {
+        //Debugger
+        debugger;
         // Jump to the find/replace result.
         try {
             //XXX Note that "url" is the current (bad) name for the view ID, which
@@ -283,6 +299,8 @@ function moreKomodoFindResultsHistoryTreeView(treeWidget) {
 
 moreKomodoFindResultsHistoryTreeView.prototype = {
     addItem : function(label, results) {
+        //Debugger
+        debugger;
         var historyItem = {
             label : label,
             isContainer : true,
@@ -295,6 +313,8 @@ moreKomodoFindResultsHistoryTreeView.prototype = {
     },
 
     invalidate : function() {
+        //Debugger
+        debugger;
         this.treebox.invalidate();
     },
 
@@ -335,6 +355,8 @@ moreKomodoFindResultsHistoryTreeView.prototype = {
     },
 
     deleteIndexes : function(indexes) {
+        //Debugger
+        debugger;
         if (indexes && indexes.length > 0) {
             for (var i = indexes.length - 1; i >= 0; i--) {
                 var index = indexes[i];
@@ -433,6 +455,8 @@ moreKomodoFindResultsHistoryTreeView.prototype = {
     },
 
     get rowCount() {
+        //Debugger
+        debugger;
         return this.visibleItems.length;
     },
 

@@ -70,16 +70,22 @@ var moreKomodoFindResults = {
      },
 
     onRefreshFindResults : function(tabIndex) {
+        //Debugger
+        debugger;
         this.onRepeatFind(tabIndex, this.arrFind.length - 1);
     },
 
     onRepeatFind : function(tabIndex, findIndex) {
+        //Debugger
+        debugger;
         this.findStartedFromUI = false;
         var findInfo = this.removeIndex(this.arrFind, findIndex);
         this.executeFind(tabIndex, findInfo.options, findInfo.context, findInfo.pattern);
     },
 
     handleRefreshStatus : function(event) {
+        //Debugger
+        debugger;
         if (event.attrName == "disabled") {
             if (event.newValue == "true") { // attribute is set
                 moreKomodoFindResults.onFindFinished(event);
@@ -91,6 +97,8 @@ var moreKomodoFindResults = {
     },
 
     onFindStarted : function(event) {
+        //Debugger
+        debugger;
         var idName = event.target.id.replace("-stopsearch-button", "-morekomodo-refresh");
         var refreshButton = document.getElementById(idName);
 
@@ -107,6 +115,8 @@ var moreKomodoFindResults = {
     },
 
     onFindFinished : function(event) {
+        //Debugger
+        debugger;
         var idName = event.target.id.replace("-stopsearch-button", "-morekomodo-refresh");
         var refreshButton = document.getElementById(idName);
 
@@ -128,6 +138,8 @@ var moreKomodoFindResults = {
     },
 
     updateFindInfo : function(id) {
+        //Debugger
+        debugger;
         var tabIndex = id.match("([0-9]+)");
 
         if (tabIndex.length > 0) {
@@ -146,6 +158,8 @@ var moreKomodoFindResults = {
         }
     },
     onOpenFoundFiles : function(tabIndex, useSelectedItems) {
+        //Debugger
+        debugger;
         var view = ko.findresults.getManager(tabIndex).view;
         var columnId = this.getColumnIdFromType(tabIndex, moreKomodoFindResultsUtil.FILE_PATH);
 
@@ -153,6 +167,8 @@ var moreKomodoFindResults = {
     },
 
     onFindBySelection : function(tabIndex) {
+        //Debugger
+        debugger;
         var view = ko.views.manager.currentView;
 
         if (!(view
@@ -183,7 +199,8 @@ var moreKomodoFindResults = {
 
     initRefreshViewMenu : function(event, tabIndex) {
         var menu = event.target;
-
+//Debugger
+        debugger;
         MoreKomodoCommon.removeMenuItems(menu);
         // Insert from last (most recent used) to first element
         for (var i = this.arrFind.length - 1; i >= 0; i--) {
@@ -193,6 +210,8 @@ var moreKomodoFindResults = {
     },
 
     appendRefreshItem : function(menu, findInfo, tabIndex, findIndex) {
+        //Debugger
+        debugger;
         var item = document.createElement("menuitem");
         var label = document.getElementById("morekomodo-refresh-tooltip")
                         .createLabelFromPattern(findInfo);
@@ -210,6 +229,8 @@ var moreKomodoFindResults = {
     },
 
     insertExtraMenuItems : function(menu) {
+        //Debugger
+        debugger;
         var menuitem = document.getElementById("morekomodo-refresh-static-menupopup")
                         .firstChild;
         while (menuitem) {
@@ -222,6 +243,8 @@ var moreKomodoFindResults = {
     },
 
     removeAllFindInfo : function(event) {
+        //Debugger
+        debugger;
         // First element is left in array
         this.arrFind.splice(1, this.arrFind.length - 1);
     },
@@ -241,6 +264,8 @@ var moreKomodoFindResults = {
     },
 
     executeFind : function(tabIndex, options, context, pattern) {
+        //Debugger
+        debugger;
         moreKomodoFindResultsUtil.copyFindOptions(options, this._findSvc.options);
         // Ensure output goes on correct tab
         this._findSvc.options.displayInFindResults2 = tabIndex == 2;
@@ -262,6 +287,9 @@ var moreKomodoFindResults = {
     },
 
     onCopyToViewFindResults : function(tabIndex, copyFileNames, useSelectedItems) {
+
+        //Debugger
+        debugger;
         var view = ko.findresults.getManager(tabIndex).view;
         var type = copyFileNames
                         ? moreKomodoFindResultsUtil.FILE_PATH
@@ -330,6 +358,8 @@ var moreKomodoFindResults = {
     },
 
     get selectedTabManagerIndex() {
+        //Debugger
+        debugger;
         for (var i = 1; i <= 2; i++) {
             var tab = top.document.getElementById("findresults" + i +"_tabpanel");
             if (tab
@@ -346,6 +376,8 @@ var moreKomodoFindResults = {
         return -1;
     },
     getColumnIdFromType : function(tabIndex, resultType) {
+        //Debugger
+        debugger;
         switch (resultType) {
             case moreKomodoFindResultsUtil.LINE_NUMBER:
                 return "findresults-linenum";

@@ -17,6 +17,17 @@
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
     <script type="application/x-javascript"
+            src="chrome://morekomodo/content/common.js" />
+    <script type="application/x-javascript"
+            src="chrome://morekomodo/content/prefs.js" />
+    <script type="application/x-javascript"
+            src="chrome://morekomodo/content/findResults/util.js" />
+    <script type="application/x-javascript"
+            src="chrome://morekomodo/content/findfiles/findInFilesWidgetsInitializer.js" />
+    <script type="application/x-javascript"
+            src="chrome://morekomodo/content/favorites/find/findOverlay.js" />
+
+    <script type="application/x-javascript"
         src="chrome://morekomodo/content/findResults/history.js" />
 
 
