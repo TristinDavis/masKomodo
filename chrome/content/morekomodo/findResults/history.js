@@ -160,10 +160,10 @@ var moreKomodoFindResultsHistory = {
         debugger;
         if (this.disableButton.getAttribute("off") == "true") {
             this.disableButton.setAttribute("off", "false");
-            MoreKomodoCommon.log("DID IT WORK??");
+            MoreKomodoCommon.log("The button is now enabled.");
         } else {
             this.disableButton.setAttribute("off", "true");
-            MoreKomodoCommon.log("DID IT WORK??");
+            MoreKomodoCommon.log("The button should now be disabled.");
         }
     },
 

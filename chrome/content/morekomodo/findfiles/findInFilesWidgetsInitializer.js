@@ -36,8 +36,8 @@
 */
 var findInFilesWidgetsInitializer = {
     findContextMap : {
-        "curr-project" : document.getElementById("search-in-curr-project"),
-        "files" : document.getElementById("search-in-files")
+        "curr-project" : document.getElementById("menu_findInCurrProject"),
+        "files" : document.getElementById("menu_findInFiles")
             || document.getElementsByAttribute("value", "files").item(0),
         "collection" : document.getElementById("search-in-collection")},
 
