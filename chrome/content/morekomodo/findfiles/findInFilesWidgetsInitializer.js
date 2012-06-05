@@ -60,6 +60,7 @@ var findInFilesWidgetsInitializer = {
     },
 
     setLastFindInFiles : function() {
+        //how do the tow things in the line below relate to each other?
         if ((this.searchIn.value in this.findContextMap)
             && this.prefs.useLastFindContext) {
             var lastFindContext = this.prefs.lastFindContext;

@@ -23,12 +23,9 @@
     <script type="application/x-javascript"
             src="chrome://morekomodo/content/findResults/util.js" />
     <script type="application/x-javascript"
-            src="chrome://morekomodo/content/findfiles/findInFilesWidgetsInitializer.js" />
-    <script type="application/x-javascript"
             src="chrome://morekomodo/content/favorites/find/findOverlay.js" />
-
     <script type="application/x-javascript"
-        src="chrome://morekomodo/content/findResults/history.js" />
+            src="chrome://morekomodo/content/findResults/history.js" />
 
 
     <menupopup id="menu_view_tabs_popup">

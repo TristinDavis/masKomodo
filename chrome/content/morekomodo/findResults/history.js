@@ -147,6 +147,7 @@ var moreKomodoFindResultsHistory = {
         //Debugger
         debugger;
         this.treeView.deleteIndexes(this.treeView.selectedRootIndexes);
+        MoreKomodoCommon.log("This button appears to be broken.  This this.treeView.deleteIndexes = "+this.treeView.deleteIndexes+".  THis this.treeView.selectedRootIndexes = "+this.treeView.selectedRootIndexes);
     },
 
     get isDisabled() {
@@ -335,6 +336,7 @@ moreKomodoFindResultsHistoryTreeView.prototype = {
     },
 
     get selectedRootIndexes() {
+        debugger;
         var selection = this.selection;
         var items = [];
 

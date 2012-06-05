@@ -126,6 +126,8 @@ var moreKomodoFindResults = {
             // restore to last used settings so find dialog shows them correctly
             // timeOut ensures the description is updated before restoring settings
             window.setTimeout(function() {
+                //Debugger
+                debugger;
                 moreKomodoFindResultsUtil.copyFindOptions(
                     moreKomodoFindResults.lastUsedFindOptions,
                     moreKomodoFindResults._findSvc.options);
