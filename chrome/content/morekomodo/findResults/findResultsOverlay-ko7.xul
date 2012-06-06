@@ -45,7 +45,7 @@
                 oncommand="goDoCommand('cmd_morekomodo_findBySelection')"/>
     </broadcasterset>
 
-    <hbox id="findtoolbar-button-box">
+    <hbox id="findtoolbar1-button-box">
         <hbox id="findresults-morekomodo-toolbarbox" insertbefore="findresults-jumptoprev-button">
             <button
                     id="findresults-morekomodo-openfoundfiles"
@@ -94,7 +94,7 @@
         </hbox>
     </hbox>
 
-    <popupset id="extensionPopupSet">
+    <popupset>
         <menupopup id="morekomodo-refresh-static-menupopup">
             <menuseparator />
             <menuitem id="mk-refresh-clear"
