@@ -203,12 +203,16 @@ var moreKomodoFindResults = {
         var menu = event.target;
 //Debugger
         debugger;
+        alert(moreKomodoFindResults);
+         MoreKomodoCommon.log("This is what the menu looks like before the for loops is done: "+menu);
         MoreKomodoCommon.removeMenuItems(menu);
         // Insert from last (most recent used) to first element
         for (var i = this.arrFind.length - 1; i >= 0; i--) {
             this.appendRefreshItem(menu, this.arrFind[i], tabIndex, i);
         }
+         MoreKomodoCommon.log("This is what the menu is when the for loops is done: "+menu);
         this.insertExtraMenuItems(menu);
+
     },
 
     appendRefreshItem : function(menu, findInfo, tabIndex, findIndex) {
@@ -233,6 +237,7 @@ var moreKomodoFindResults = {
     insertExtraMenuItems : function(menu) {
         //Debugger
         debugger;
+        MoreKomodoCommon.log("Just jumped into this fuction: insertExtraMenuItems");
         var menuitem = document.getElementById("morekomodo-refresh-static-menupopup")
                         .firstChild;
         while (menuitem) {
