@@ -14,6 +14,7 @@
     <script type="application/x-javascript"
             src="chrome://morekomodo/content/findResults/findResults.js" />
 
+            
 
     <broadcasterset id="broadcasterset_global">
         <broadcaster
